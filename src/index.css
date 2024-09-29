@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap");
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.88rem;
+}
+
+::-webkit-scrollbar-track {
+  border: 7px solid #292c3b;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  background-color: #d4d4d8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* for Firefox */
+html {
+  scrollbar-color: #ebc6d980 #3d4a59;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --Primary: #000;
+  --seconday: rgb(24, 24, 27);
+  --title_color: #f4f4f57d;
+  --border: rgba(63, 63, 70, 0.4);
+  --bg-color: rgb(157 157 161 / 22%);
+  --hover-color: rgb(20 184 166);
+  --title: rgb(244, 244, 245);
+  --subtitle: rgb(161, 161, 170);
+  --blue: rgb(93, 188, 252);
+  --icon-hover: #d4d4d8;
+  --input-color: rgb(161, 161, 170, 0.15);
+  --input-border-color: rgb(45 512 191);
+  --scroll-btn: rgba(25, 118, 210, 0.85);
+}
+.light {
+  --Primary: rgb(250, 250, 250);
+  --seconday: rgb(255, 255, 255);
+  --bg-color: rgb(157 157 161 / 22%);
+  --title_color: rgb(39 39 42);
+  --title: rgb(39 39 42);
+  --border: rgba(220, 220, 220, 0.53);
+  --subtitle: rgb(82 82 91);
+  --bg-color: rgb(253 253 253);
+  --blue: rgb(0, 149, 246);
+  --input-color: rgb(161, 161, 170, 0.15);
+  --input-border-color: rgb(45 512 191);
+}
+body {
+  background-color: var(--Primary);
+  color: #fff;
+}
+.container {
+  width: 80%;
+  background: var(--seconday);
+  margin: 0 auto;
+  padding: 4rem;
+  padding-bottom: 1rem;
+}
+.border {
+  border: 2px solid red;
+}
+
+.bodder_div {
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  width: calc(100% + 8rem);
+  margin-left: -4rem;
+}
+.bodder_div:last-child {
+  margin-top: 0.1rem;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+  color: var(--title_color);
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.scroll-up {
+  position: fixed;
+  background-color: var(--scroll-btn);
+  bottom: 10px;
+  right: 3%;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  transition: 0.3s;
+  color: #ffff;
+}
+.scroll-up:hover {
+  background-color: rgb(25, 118, 210);
+  color: var(--title);
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+  .bodder_div {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 2rem;
+  }
+  .scroll-up {
+    width: 2rem;
+    height: 2rem;
+    opacity: 0.6;
+  }
+}

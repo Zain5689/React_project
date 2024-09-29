@@ -1,0 +1,108 @@
+header {
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+header ul {
+  gap: 15px;
+  background-color: var(--bg-color);
+  padding: 12px;
+  border-radius: 25px;
+}
+.light header ul {
+  box-shadow: 0px 0px 18px 2px #4f4f8833;
+}
+header ul li a {
+  font-size: 1rem;
+}
+
+header ul li a:hover {
+  color: var(--hover-color);
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+.fixed {
+  animation: mymove 1s ease-in;
+  position: fixed;
+  z-index: 99999999;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #4f4f8891;
+  backdrop-filter: blur(8px);
+}
+.fixed ul.modal {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 15px;
+  background-color: var(--bg-color);
+}
+
+.fixed ul.modal li {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb29;
+  position: relative;
+}
+.fixed ul.modal li button.close {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  padding: 7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: 0.5s;
+  font-weight: bold;
+  color: var(--title);
+}
+.fixed ul.modal li button.close:hover {
+  rotate: 360deg;
+  color: red;
+}
+@keyframes mymove {
+  0% {
+    scale: 0;
+  }
+
+  60% {
+    scale: 1.1;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.show,
+.moon {
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-color);
+  color: var(--title_color);
+  transition: 0.2s;
+  border: 1px solid #fa807259;
+}
+.show {
+  display: none;
+}
+.show:hover,
+.moon:hover {
+  color: var(--title);
+  border: 1px solid #fa8072;
+}
+.icon-sun {
+  color: rgb(255, 165, 0);
+}
+@media (max-width: 700px) {
+  header nav {
+    display: none;
+  }
+  .show {
+    display: flex;
+  }
+}

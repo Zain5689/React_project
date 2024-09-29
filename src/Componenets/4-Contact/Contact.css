@@ -1,0 +1,114 @@
+.contact-us {
+  padding: 30px 0;
+}
+.contact-us h1 {
+  gap: 20px;
+  color: var(--title);
+  margin-bottom: 15px;
+}
+.contact-us h1 span {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+}
+.contact-us h1 span:hover {
+  color: var(--icon-hover);
+  cursor: pointer;
+}
+.contact-us p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: var(--subtitle);
+  line-height: 1.5rem;
+}
+/*============================
+Right Side
+=============================*/
+.contact-us .right form {
+  width: 100%;
+}
+label {
+  width: 60%;
+  color: var(--subtitle);
+}
+.contact-us .right form input,
+.contact-us .right form textarea {
+  all: unset;
+  background-color: var(--input-color);
+  padding: 0.6rem 5rem;
+  margin: 1rem;
+  width: 100%;
+  transition: 0.5s;
+  border: 1px solid rgb(63, 63, 70);
+}
+.light .contact-us .right form input,
+.light .contact-us .right form textarea {
+  background-color: #fffdfd;
+  border: 1px solid rgba(63, 63, 70, 0.54);
+  color: #000;
+}
+.contact-us .right form input:focus,
+.contact-us .right form textarea:focus {
+  border: 1px solid var(--input-border-color);
+}
+.contact-us .right form input:hover,
+.contact-us .right form textarea:hover {
+  border: 1px solid var(--input-border-color);
+}
+
+.light .contact-us .right form input:focus,
+.light .contact-us .right form textarea:focus {
+  border: 1px solid rgb(63, 63, 70);
+}
+.light .contact-us .right form input:hover,
+.light .contact-us .right form textarea:hover {
+  border: 1px solid rgb(63, 63, 70);
+}
+.contact-us .right form button {
+  margin-top: 30px;
+  background-color: var(--input-color);
+  border: 1px solid rgb(63, 63, 70);
+  padding: 0.7rem 2rem;
+  transition: 0.5s;
+  color: var(--title);
+}
+.contact-us .right form button:hover {
+  scale: 0.9;
+}
+/*============================
+left Side
+=============================*/
+@media (max-width: 1200px) {
+  .animation {
+    display: none;
+  }
+}
+/*============================
+Media
+
+=============================*/
+@media (max-width: 600px) {
+  .left {
+    display: none;
+  }
+  .contact-us .right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-us .right form > div.flex {
+    flex-direction: column;
+  }
+  .contact-us .right form input,
+  .contact-us .right form textarea {
+    background-color: var(--input-color);
+    padding: 0.6rem 1.6rem;
+    margin: 1rem 0;
+    margin-left: 2.5rem;
+    width: 100%;
+  }
+  .contact-us .right form button {
+    width: fit-content;
+    align-self: center;
+  }
+}
