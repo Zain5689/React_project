@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
 import "../Skills/Skill";
+import { Link } from "react-router-dom";
 function Header() {
   const [show, setShow] = useState(false);
   const [theme, settheme] = useState("light");
@@ -47,8 +48,14 @@ function Header() {
           </ul>
         </nav>
         <div className="flex icons">
-          <span className="icon_1 icon-github"></span>
-          <span className="icon_1 icon-linkedin-square"></span>
+          <Link
+            to={"https://github.com/Zain5689"}
+            className="icon_1 icon-github"
+          />
+          <Link
+            to={"https://www.linkedin.com/in/zainab-hilal-b5b031225/"}
+            className="icon_1 icon-linkedin-square"
+          />
           <button
             onClick={() => {
               localStorage.setItem("mode", theme === "dark" ? "light" : "dark");
