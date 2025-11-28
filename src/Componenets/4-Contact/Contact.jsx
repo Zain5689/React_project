@@ -5,15 +5,20 @@ import ContactAnimation from "../../Animation/Contact.json";
 function Contact() {
   return (
     <>
-      <section className="contact-us">
+      <section className="contact-us" id="contact">
         <h1 className="flex">
           <span className="icon-envelope1"></span>
           Contact Us
         </h1>
-        <p>
-          Get notified when I publish something new, and unsubscribe at any
-          time.
-        </p>
+        <div className="flex gap-2 mb-6">
+          <span style={{ marginRight: "5px" }}>Email:</span>
+          <a
+            href="mailto:hlalzynbhlal@gmail"
+            className="underline text-blue-700 dark:text-blue-400 mx-2"
+          >
+            hlalzynbhlal@gmail
+          </a>
+        </div>
         <div
           className="flex"
           style={{

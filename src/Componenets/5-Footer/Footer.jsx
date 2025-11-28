@@ -7,19 +7,19 @@ function Footer() {
         <footer className="flex">
           <ul className="flex">
             <li>
-              <a href="">Home</a>
+              <a href=""> About</a>
             </li>
             <li>
-              <a href="">About</a>
+              <a href=""> Skills</a>
             </li>
             <li>
-              <a href="">Project</a>
+              <a href="">Projects</a>
             </li>
             <li>
-              <a href="">Articles</a>
+              <a href="">Contact</a>
             </li>
           </ul>
-          <p>@All Copy Right by Zainab && 2024 -- 2025</p>
+          <p>© 2024 Zainab Hilal™. All Rights Reserved.</p>
         </footer>
       </div>
     </>

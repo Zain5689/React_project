@@ -89,7 +89,7 @@ Media
 =============================*/
 @media (max-width: 600px) {
   .left {
-    display: none;
+    /* display: none; */
   }
   .contact-us .right form {
     width: 100%;

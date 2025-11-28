@@ -1,36 +1,41 @@
 import "./Hero.css";
 import Lottie from "lottie-react";
 import devAnimation from "../../Animation/developer.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 function Hero() {
   return (
     <>
       <section
+        id="hero"
         className="hero flex"
         style={{ justifyContent: "space-between" }}
       >
         <div className="side-left ">
           <div className="aveter flex">
-            <img src="/public/img.jpg" alt="Avter" className="avert" />
+            <img src="zainab.jpg" alt="Avter" className="avert" />
             <div className="icon-checkmark-outline icon"></div>
           </div>
-          <h1>Software designer, founder, and amateur astronaut.</h1>
+          <h1>Hi, I'm Zainab Hilal , </h1>
+          <h1>Front-End Developer</h1>
           <p>
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Aspiring Front-End Developer with expertise in React, Next.js,
+            TypeScript, and Tailwind CSS. dedicated to creating engaging user
+            experiences and continuously enhancing web application performance.
           </p>
-          <div className="icon-all flex">
-            <span className="icon icon-social-twitter"></span>
-            <span className="icon icon-instagram1"></span>
-            <span className="icon icon-github"></span>
-            <span className="icon icon-linkedin-square"></span>
-          </div>
         </div>
         <div className="side-right">
           <Lottie animationData={devAnimation} loop={true} className="anim" />
         </div>
       </section>
+      <div className="bodder_div" />
+      <div className="education">
+        <div className=" flex gap-10">
+          <FontAwesomeIcon icon={faGraduationCap} className="icon_educ" />
+          <h2>Education</h2>
+        </div>
+        <p>Faculty of Computer and Artificial Intelligence - FCAI</p>
+      </div>
     </>
   );
 }

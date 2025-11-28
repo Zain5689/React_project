@@ -36,7 +36,6 @@ main.flex .left .buttons button {
   border: 0.5px solid var(--blue);
 }
 
-
 main.flex .left .buttons button:hover,
 main.flex .left .buttons button.active {
   color: var(--title);
@@ -67,6 +66,7 @@ main.flex .right .card {
 }
 .light main.flex .right .card {
   border: none;
+  height: 320px !important;
   box-shadow: 0px 0px 5px 2px #00000020;
 }
 .light main.flex .right .card:hover {
@@ -78,6 +78,7 @@ main.flex .right .card:hover {
 }
 main.flex .right .card img {
   border-radius: 5px;
+  height: 150px;
 }
 main.flex .right .card-body {
   padding: 10px;
@@ -98,7 +99,7 @@ main.flex .right .card-body .icons {
 main.flex .right .card-body .icons .icon {
   gap: 16px;
 }
-main.flex .right .card-body .icons .icon > div {
+main.flex .right .card-body .icons .icon .icon_link {
   font-size: 1.2rem;
   color: var(--subtitle);
   transition: 0.3s;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Header.css";
+import "../Skills/Skill";
 function Header() {
   const [show, setShow] = useState(false);
   const [theme, settheme] = useState("light");
@@ -25,39 +26,43 @@ function Header() {
         >
           <span className="icon-menu" />
         </button>
-        <div />
+
+        <div>
+          <h2 className="title">Zainab Hilal</h2>
+        </div>
         <nav>
           <ul className="flex">
             <li>
-              <a href="#">About</a>
+              <a href="#hero">About</a>
             </li>
             <li>
-              <a href="#">Articles</a>
+              <a href="#skill"> Skills </a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#projects">Projects </a>
             </li>
             <li>
-              <a href="#">Speaking</a>
-            </li>
-            <li>
-              <a href="#">Uses</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
-        <button
-          onClick={() => {
-            localStorage.setItem("mode", theme === "dark" ? "light" : "dark");
-            settheme(localStorage.getItem("mode"));
-          }}
-          className="moon flex"
-        >
-          {theme === "light" ? (
-            <span className="icon-moon1"></span>
-          ) : (
-            <span className="icon-sun"></span>
-          )}
-        </button>
+        <div className="flex icons">
+          <span className="icon_1 icon-github"></span>
+          <span className="icon_1 icon-linkedin-square"></span>
+          <button
+            onClick={() => {
+              localStorage.setItem("mode", theme === "dark" ? "light" : "dark");
+              settheme(localStorage.getItem("mode"));
+            }}
+            className="moon flex"
+          >
+            {theme === "light" ? (
+              <span className="icon-moon1"></span>
+            ) : (
+              <span className="icon-sun"></span>
+            )}
+          </button>
+        </div>
 
         {show && (
           <div className="fixed">
@@ -71,19 +76,16 @@ function Header() {
                 ></button>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#hero">About</a>
               </li>
               <li>
-                <a href="#">Articles</a>
+                <a href="#skill"> Skills </a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="#">Projects </a>
               </li>
               <li>
-                <a href="#">Speaking</a>
-              </li>
-              <li>
-                <a href="#">Uses</a>
+                <a href="#">Contact</a>
               </li>
             </ul>
           </div>

@@ -4,6 +4,7 @@ import Hero from "./Componenets/2-Hero/Hero";
 import Main from "./Componenets/3-Main/Main";
 import Contact from "./Componenets/4-Contact/Contact";
 import Footer from "./Componenets/5-Footer/Footer";
+import Skill from "./Componenets/Skills/Skill";
 
 function App() {
   const [scroll, setScroll] = useState(false);
@@ -23,6 +24,8 @@ function App() {
         <Hero />
         <div className="bodder_div" />
 
+        <Skill />
+        <div className="bodder_div" />
         <Main />
         <div className="bodder_div" />
 

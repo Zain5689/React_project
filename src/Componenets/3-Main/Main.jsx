@@ -2,6 +2,7 @@ import { useState } from "react";
 import { data } from "../../index";
 import "./Main.css";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Main() {
   const [active, setActive] = useState("all");
@@ -20,7 +21,7 @@ function Main() {
   };
 
   return (
-    <main className="flex">
+    <main className="flex" id="projects">
       <div className="left">
         <div className="buttons flex">
           <button
@@ -42,16 +43,22 @@ function Main() {
             JavaScript
           </button>
           <button
-            onClick={() => filterProjects("react")}
-            className={active === "react" ? "active" : null}
-          >
-            React
-          </button>
-          <button
             onClick={() => filterProjects("boot")}
             className={active === "boot" ? "active" : null}
           >
             Bootstrap
+          </button>
+          <button
+            onClick={() => filterProjects("tail")}
+            className={active === "tail" ? "active" : null}
+          >
+            Tailwind
+          </button>
+          <button
+            onClick={() => filterProjects("react")}
+            className={active === "react" ? "active" : null}
+          >
+            React
           </button>
         </div>
       </div>
@@ -71,8 +78,11 @@ function Main() {
                 <p>{item.paragraph}</p>
                 <div className="flex icons">
                   <div className="flex icon">
-                    <div className="icon-link"></div>
-                    <div className="icon-github"></div>
+                    <Link className="icon-link icon_link" to={item.link}></Link>
+                    <Link
+                      className="icon-github icon_link"
+                      to={item.github}
+                    ></Link>
                   </div>
                   <div className="flex arrow">
                     <a href="#">More</a>

@@ -1,12 +1,14 @@
 header {
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 20px;
 }
-
+.title {
+  color: gray;
+}
 header ul {
   gap: 15px;
   background-color: var(--bg-color);
-  padding: 12px;
+  padding: 12px 25px;
   border-radius: 25px;
 }
 .light header ul {
@@ -62,6 +64,12 @@ header ul li a:hover {
   rotate: 360deg;
   color: red;
 }
+.icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 @keyframes mymove {
   0% {
     scale: 0;
@@ -76,9 +84,10 @@ header ul li a:hover {
 }
 
 .show,
-.moon {
+.moon,
+.icons .icon_1 {
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -86,12 +95,14 @@ header ul li a:hover {
   color: var(--title_color);
   transition: 0.2s;
   border: 1px solid #fa807259;
+  cursor: pointer;
 }
 .show {
   display: none;
 }
 .show:hover,
-.moon:hover {
+.moon:hover,
+.icons .icon_1:hover {
   color: var(--title);
   border: 1px solid #fa8072;
 }
